@@ -1,0 +1,37 @@
+option  "nthreads"             t  "number of threads"                          double  default="0"          optional
+option  "width"                -  "scene width"                                      double  default="10000"      optional
+option  "height"               -  "scene height"                                     double  default="10000"      optional
+option  "length"               -  "scene length"                                     double  default="10000"      optional
+option  "n"                    n  "n"                                          int     default="3"          optional
+option  "fps"                  -  "frames per second"                          int     default="20"         optional
+option  "iter"                 i  "iteration count (when -f time)"             int     default="1000"       optional
+option  "format"               f  "output format (see below)"                  string  default="x"          optional
+option  "gravitational"        g  "gravitational constant"                     double  default="6.67428e3"  optional
+option  "barnes-hut"           b  "enable Barnes-Hut simulation (see below)"   int     default="1"          optional
+option  "collision-detection"  c  "collision detection algorithm (see below)"  int     default="2"          optional
+option  "random"               r  "generate bodies randomly (see below)"       int     default="1"          optional
+option  "dimension"            d  "dimension (2 or 3)"                         int     default="2"          optional
+
+text "\nDisplay format\n"
+text "x: Xlib\n"
+text "text: Text\n"
+text "time: Benchmarking\n"
+
+text "\nCollision detection (-c ?)\n"
+text "0: Brute-force\n"
+text "1: Sweep line + Interval tree (only 2d)\n"
+text "2: Binary space partitioning tree\n"
+text "3: Sweep line + Segment tree (only 2d)\n"
+
+text "\nAcceleration calculation (-b ?)\n"
+text "0: Brute-force simulation\n"
+text "1: Barnes-Hut simulation\n"
+
+text "\nData generation (-r ?)\n"
+text "0: Random\n"
+text "1: Read from stdin\n"
+
+text "\nWhen -r 0 is specified, initial status of n bodies is read from stdin.\nThe data in stdin should be the juxtaposition of n descriptions of bodies, each has the following form:n\n"
+text "pos.x pos.y pos.z\n"
+text "v.x v.y v.z\n"
+text "mass radius\n"
