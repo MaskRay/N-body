@@ -8,7 +8,7 @@ AC_PROG_CC
 AC_PROG_CXX
 AM_PROG_CC_C_O
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_FILES([Makefile src/Makefile report/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile])
 
 PKG_CHECK_MODULES([X11], [x11])
 
