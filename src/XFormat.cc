@@ -55,7 +55,6 @@ EXPOSE:
         XWindowAttributes attr;
         XGetWindowAttributes(dpy, win, &attr);
         Task& tk = fsm.tk;
-        unsigned long black = BlackPixel(dpy, DefaultScreen(dpy));
         XClearWindow(dpy, win);
         for (int i = 0; i < tk.n; i++) {
           double cx = tk.bodies[i].pos.x / cfg.width * attr.width,

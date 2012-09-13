@@ -86,8 +86,6 @@ void QuadTree::barnesHut(const Node* rt, const Task& tk, ft xmin, ft ymin, ft xm
   if (rt == NULL) return;
   ft xmid = (xmin + xmax) / 2,
      ymid = (ymin + ymax) / 2,
-     cx = rt->xm / rt->mass,
-     cy = rt->ym / rt->mass,
      s = max(xmax - xmin, ymax - ymin),
      dx = rt->xm / rt->mass - me->pos.x,
      dy = rt->ym / rt->mass - me->pos.y,
